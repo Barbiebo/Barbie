@@ -12,6 +12,7 @@ sudos   = dofile("sudo.lua")
 bot_id  = token:match("(%d+)")  
 Id_Sudo = Sudo
 List_Sudos = {Id_Sudo}
+io.popen("mkdir Barbie_Files")
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
