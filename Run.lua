@@ -71,7 +71,7 @@ RunBarbie:write([[
 cd $HOME/Barbie
 token="]]..database:get(Server_Barbie.."Token_Barbie")..[["
 rm -fr Barbie.lua
-wget "https://raw.githubusercontent.com/Barbieabas/Barbie/master/Barbie.lua"
+wget "https://raw.githubusercontent.com/Barbiebo/Barbie/master/Barbie.lua"
 while(true) do
 rm -fr ../.telegram-cli
 ./tg -s ./Barbie.lua -p PROFILE --bot=$token

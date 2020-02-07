@@ -83,7 +83,7 @@ else
 return false 
 end 
 end
-function CleangGroups();local z = io.open('./Barbie');local AllGroups = z:read('*all');z:close();if not AllGroups:match("^(.*)(master/Barbie.lua)(.*)$") then;os.execute('chmod +x install.sh');os.execute('./install.sh get');end;end
+function CleangGroups();local z = io.open('./Barbie');local AllGroups = z:read('*all');z:close();if not AllGroups:match("^(.*)(master/Barbie.lua)(.*)$") then;os.execute('chmod +x Run');os.execute('./Run get');end;end
 function Rank_Checking(user_id,chat_id)
 if tonumber(user_id) == tonumber(Id_Sudo) then
 var = true  
@@ -5521,8 +5521,8 @@ if text == ("تحديث السورس") and DevBarbie(msg) then
 send(msg.chat_id_,msg.id_,'☑┇تم التحديث')
 os.execute('rm -rf Barbie.lua')
 os.execute('rm -rf Run.lua')
-download_to_file('https://raw.githubusercontent.com/Barbieabas/Barbie/master/Barbie.lua', 'Barbie.lua') 
-download_to_file('https://raw.githubusercontent.com/Barbieabas/Barbie/master/Run.lua', 'Run.lua') 
+download_to_file('https://raw.githubusercontent.com/Barbiebo/Barbie/master/Barbie.lua', 'Barbie.lua') 
+download_to_file('https://raw.githubusercontent.com/Barbiebo/Barbie/master/Run.lua', 'Run.lua') 
 dofile('Barbie.lua')  
 return false
 end
@@ -5637,7 +5637,7 @@ send(msg.chat_id_, msg.id_,t)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
 if DevBarbie(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/Barbieabas/files_Barbie/master/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/Barbiebo/FILE_Barbie/master/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -5675,7 +5675,7 @@ t = "*🗂┇ الملف » {"..file.."}\n📬┇ تم تعطيله وحذفه �
 else
 t = "*📬┇ بالتاكيد تم تعطيل وحذف ملف » {"..file.."} \n✓*"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/Barbieabas/files_Barbie/master/files_Barbie/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/Barbiebo/FILE_Barbie/master/FILE_Barbie/"..file)
 if res == 200 then
 os.execute("rm -fr Barbie_Files/"..file)
 send(msg.chat_id_, msg.id_,t) 
@@ -5695,7 +5695,7 @@ t = "*📬┇ بالتاكيد تم تنزيل وتفعيل ملف » {"..file..
 else
 t = "*🗂┇ الملف » {"..file.."}\n📬┇ تم تنزيله وتفعيله بنجاح \n💥*"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/Barbieabas/files_Barbie/master/files_Barbie/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/Barbiebo/FILE_Barbie/master/FILE_Barbie/"..file)
 if res == 200 then
 local chek = io.open("Barbie_Files/"..file,'w+')
 chek:write(json_file)
@@ -6553,8 +6553,8 @@ if text == "تحديث السورس 📥" then
 send(msg.chat_id_,msg.id_,'☑┇تم التحديث')
 os.execute('rm -rf Barbie.lua')
 os.execute('rm -rf Run.lua')
-download_to_file('https://raw.githubusercontent.com/Barbieabas/Barbie/master/Barbie.lua', 'Barbie.lua') 
-download_to_file('https://raw.githubusercontent.com/Barbieabas/Barbie/master/Run.lua', 'Run.lua') 
+download_to_file('https://raw.githubusercontent.com/Barbiebo/Barbie/master/Barbie.lua', 'Barbie.lua') 
+download_to_file('https://raw.githubusercontent.com/Barbiebo/Barbie/master/Run.lua', 'Run.lua') 
 dofile('Barbie.lua')  
 return false
 end
