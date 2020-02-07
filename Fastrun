@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+cd $HOME/Barbie
+rm -rf $HOME/.telegram-cli
+install() {
+rm -rf $HOME/.telegram-cli
+sudo chmod +x tg
+chmod +x Barbie
+chmod +x Be
+./ts
+}
+if [ "$1" = "ins" ]; then
+install
+fi
+chmod +x Run
+lua Run.lua
